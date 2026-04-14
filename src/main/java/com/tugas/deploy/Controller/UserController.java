@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-        import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -22,7 +22,7 @@ public class UserController {
     public String login(@RequestParam String username,
                         @RequestParam String password) {
 
-        if (username.equals("admin")) {
+        if (username.equals("admin") && password.equals("20230140136")) {
             return "redirect:/home";
         }
         return "login";
