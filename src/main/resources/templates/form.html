@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Input Mahasiswa</h2>
+
+    <form action="/save" method="post" th:object="${user}">
+        <input type="text" th:field="*{nama}" placeholder="Nama" required><br><br>
+
+        <input type="text" th:field="*{nim}" placeholder="NIM" required><br><br>
+
+        <select th:field="*{jenisKelamin}">
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select><br><br>
+
+        <button type="submit">Simpan</button>
+    </form>
+</div>
+
+</body>
+</html>
